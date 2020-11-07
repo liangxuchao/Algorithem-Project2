@@ -17,6 +17,8 @@ public class GraphModel {
         adj.get(u).add(v); 
         adj.get(v).add(u); 
     } 
+    
+    // Maximum node can be on the graph
     public static    int V = 1088092 ; 
     // A utility function to print the adjacency list 
     // representation of graph 
@@ -31,6 +33,29 @@ public class GraphModel {
             System.out.println(); 
         } 
     } 
+    
+    public static LinkedList<Integer> printNearestHospitalPath (int source, int sizeofdest ,int[] dest){
+    	LinkedList<Integer> templist = printShortestDistance(source, dest[0]);
+    	int temppathcount = templist.size();
+    	
+    	for(int i=1; i< sizeofdest; i++) {
+    		LinkedList<Integer> temp = printShortestDistance(source, dest[i]);
+    		if(temp.size() < temppathcount) {
+    			templist = temp;
+    			temppathcount = temp.size();
+    		}
+    		
+    	}
+    	
+    	System.out.println("Shortest path length is: " + temppathcount);
+		
+		// Print path
+		System.out.println("Path is ::");
+		for (int i = templist.size() - 1; i >= 0; i--) {
+		   System.out.print(templist.get(i) + " ");
+		}
+    	return templist;
+    }
   
     public static LinkedList<Integer> printShortestDistance( int s, int dest)
 	{
@@ -43,9 +68,8 @@ public class GraphModel {
 		// LinkedList to store path
 		LinkedList<Integer> path = new LinkedList<Integer>();
 		if (BFS(adj, s, dest, V, pred, dist) == false) {
-		   System.out.println("Given source and destination" + 
-		                                "are not connected");
-		  
+			
+		    return path;
 		}else {
 		
 			int crawl = dest;
@@ -55,14 +79,7 @@ public class GraphModel {
 			   crawl = pred[crawl];
 			}
 			
-			// Print distance
-			System.out.println("Shortest path length is: " + dist[dest]);
 			
-			// Print path
-			System.out.println("Path is ::");
-			for (int i = path.size() - 1; i >= 0; i--) {
-			   System.out.print(path.get(i) + " ");
-			}
 		}
 		return path;
 	}

@@ -33,7 +33,6 @@ public class Demo {
 			
 			for(int j=0; j< Model.adj.get(i).size(); j++) {
 				graph.addEdge(i + "_" + Model.adj.get(i).get(j), Integer.toString(i),  Integer.toString(Model.adj.get(i).get(j)));
-				System.out.print(i + "_" + Model.adj.get(i).get(j) + "\n");
 				
 			}	
 			
@@ -41,21 +40,56 @@ public class Demo {
 			lineNumber++;  
 		}
 		
-		
-
 		for (Node node : graph) {
 			node.setAttribute("ui.label", node.getId());
 		}
 		// Test with source and dest variable to see shortest path
-		 int source = 107, dest = 318;
-		 LinkedList<Integer> shortestpath = Model.printShortestDistance(source, dest);
+		 int source = 107;
+		 int distsize = 0;
+		 int[] hospitalarr = new int[distsize];
+		 BufferedReader br = null; 
+	        
+		  try {
+	            br = new BufferedReader(new FileReader("karate/hospital.txt"));
+	         
+	            Scanner scan = new Scanner(br);
+	            String FirstLine = br.readLine();
+	            String[] FirstLinearr = FirstLine.split("\\s+");
+  			    distsize = Integer.parseInt(FirstLinearr[1]);
+	            hospitalarr = new int[distsize];
+	            
+  				for(int i=0; i<distsize; i++) {
+  					
+		            if(scan.hasNextLine()) {
+		          	  hospitalarr[i] = Integer.parseInt(scan.nextLine());
+		          	
+		            }
+
+  				}
+	           
+	        } catch (FileNotFoundException e1) {
+	            // TODO Auto-generated catch block
+	            e1.printStackTrace();
+	        } catch (NumberFormatException e1) {
+	            // TODO Auto-generated catch block
+	            e1.printStackTrace();
+	        } catch (IOException e1) {
+	            // TODO Auto-generated catch block
+	            e1.printStackTrace();
+	        }finally {
+	            try {
+	                br.close();
+	            }catch(Exception e1){
+	                System.out.println(""+e1);
+	            }
+	        }
+		 
+		 LinkedList<Integer> shortestpath = Model.printNearestHospitalPath(source, distsize ,hospitalarr);
 		 //
 		for(int i=0; i<shortestpath.size()-1;i++) {
 			String firstid = shortestpath.get(i) + "_" + shortestpath.get(i+1);
 			String secondid = shortestpath.get(i+1) + "_" + shortestpath.get(i);
-			System.out.print(firstid);
-			System.out.print(secondid);
-			
+		
 			if(graph.getEdge(firstid) != null) {
 				graph.getEdge(firstid).addAttribute("ui.style", "fill-color:green;");
 			}
