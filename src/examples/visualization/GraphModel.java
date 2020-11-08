@@ -8,178 +8,164 @@ import java.io.IOException;
 import java.util.*; 
  
 public class GraphModel {
-	 // A utility function to add an edge in an 
-    // undirected graph 
-	public static ArrayList<ArrayList<Integer> >adj;
-    public static void addEdge(ArrayList<ArrayList<Integer> > adj, 
-                        int u, int v) 
-    { 
-        adj.get(u).add(v); 
-        adj.get(v).add(u); 
-    } 
-    
-    // Maximum node can be on the graph
-    public static    int V = 1088092 ; 
-    // A utility function to print the adjacency list 
-    // representation of graph 
-    static void printGraph(ArrayList<ArrayList<Integer> > adj) 
-    { 
-        for (int i = 0; i < adj.size(); i++) { 
-            System.out.println("\nAdjacency list of vertex" + i); 
-            System.out.print("head"); 
-            for (int j = 0; j < adj.get(i).size(); j++) { 
-                System.out.print(" -> "+adj.get(i).get(j)); 
-            } 
-            System.out.println(); 
-        } 
-    } 
-    
-    public static LinkedList<Integer> printNearestHospitalPath (int source, int sizeofdest ,int[] dest){
-    	LinkedList<Integer> templist = printShortestDistance(source, dest[0]);
-    	int temppathcount = templist.size();
-    	
-    	for(int i=1; i< sizeofdest; i++) {
-    		LinkedList<Integer> temp = printShortestDistance(source, dest[i]);
-    		if(temp.size() < temppathcount) {
-    			templist = temp;
-    			temppathcount = temp.size();
-    		}
-    		
-    	}
-    	
-    	System.out.println("Shortest path length is: " + temppathcount);
-		
-		// Print path
-		System.out.println("Path is ::");
-		for (int i = templist.size() - 1; i >= 0; i--) {
-		   System.out.print(templist.get(i) + " ");
-		}
-    	return templist;
-    }
-  
-    public static LinkedList<Integer> printShortestDistance( int s, int dest)
-	{
-	// predecessor[i] array stores predecessor of
-	// i and distance array stores distance of i
-	// from s
-		int pred[] = new int[V];
-		int dist[] = new int[V];
-
-		// LinkedList to store path
-		LinkedList<Integer> path = new LinkedList<Integer>();
-		if (BFS(adj, s, dest, V, pred, dist) == false) {
-			
-		    return path;
-		}else {
-		
-			int crawl = dest;
-			path.add(crawl);
-			while (pred[crawl] != -1) {
-			   path.add(pred[crawl]);
-			   crawl = pred[crawl];
-			}
-			
-			
-		}
-		return path;
+	// A utility function to find the vertex with minimum distance value, 
+    // from the set of vertices not yet included in shortest path tree 
+    static int V = 0; 
+    public GraphModel(int maxnode) {
+		this.V = maxnode;
 	}
 
- // a modified version of BFS that stores predecessor
-    // of each vertex in array pred
-    // and its distance from source in array dist
-    private static boolean BFS(ArrayList<ArrayList<Integer>> adj, int src,
-                                  int dest, int v, int pred[], int dist[])
-    {
-        // a queue to maintain queue of vertices whose
-        // adjacency list is to be scanned as per normal
-        // BFS algorithm using LinkedList of Integer type
-        LinkedList<Integer> queue = new LinkedList<Integer>();
- 
-        // boolean array visited[] which stores the
-        // information whether ith vertex is reached
-        // at least once in the Breadth first search
-        boolean visited[] = new boolean[v];
- 
-        // initially all vertices are unvisited
-        // so v[i] for all i is false
-        // and as no path is yet constructed
-        // dist[i] for all i set to infinity
-        for (int i = 0; i < v; i++) {
-            visited[i] = false;
-            dist[i] = Integer.MAX_VALUE;
-            pred[i] = -1;
-        }
- 
-        // now source is first to be visited and
-        // distance from source to itself should be 0
-        visited[src] = true;
-        dist[src] = 0;
-        queue.add(src);
- 
-        // bfs Algorithm
-        while (!queue.isEmpty()) {
-            int u = queue.remove();
-            for (int i = 0; i < adj.get(u).size(); i++) {
-                if (visited[adj.get(u).get(i)] == false) {
-                    visited[adj.get(u).get(i)] = true;
-                    dist[adj.get(u).get(i)] = dist[u] + 1;
-                    pred[adj.get(u).get(i)] = u;
-                    queue.add(adj.get(u).get(i));
- 
-                    // stopping condition (when we find
-                    // our destination)
-                    if (adj.get(u).get(i) == dest)
-                        return true;
-                }
-            }
-        }
-        return false;
+	int minDistance(int dist[], Boolean sptSet[]) 
+    { 
+        // Initialize min value 
+        int min = Integer.MAX_VALUE, min_index = -1; 
+  
+        for (int v = 0; v < V; v++) 
+            if (sptSet[v] == false && dist[v] <= min) { 
+                min = dist[v]; 
+                min_index = v; 
+            } 
+  
+        return min_index; 
+    } 
+  
+    // A utility function to print the constructed distance array 
+    void printSolution(int dist[]) 
+    { 
+        System.out.println("Vertex \t\t Distance from Source"); 
+        for (int i = 0; i < V; i++) 
+            System.out.println(i + " \t\t " + dist[i]); 
+    } 
+    void printSolution(int distance, int hospitalVertex) 
+    { 
+    	System.out.println("Nearest hospital from Source " + hospitalVertex + "\n"); 
+    	System.out.println("Number of edge " + distance); 
+        
+    } 
+    // Function that implements Dijkstra's single source shortest path 
+    // algorithm for a graph represented using adjacency matrix 
+    // representation 
+    void dijkstra(int graph[][], int src) 
+    { 
+        int dist[] = new int[V]; // The output array. dist[i] will hold 
+        // the shortest distance from src to i 
+  
+        // sptSet[i] will true if vertex i is included in shortest 
+        // path tree or shortest distance from src to i is finalized 
+        Boolean sptSet[] = new Boolean[V]; 
+  
+        // Initialize all distances as INFINITE and stpSet[] as false 
+        for (int i = 0; i < V; i++) { 
+            dist[i] = Integer.MAX_VALUE; 
+            sptSet[i] = false; 
+        } 
+  
+        // Distance of source vertex from itself is always 0 
+        dist[src] = 0; 
+  
+        // Read hospital information
+        int[] hospitalArr = hospitalArr();
+        int arritem = hospitalArr[0];
+        int arrindex = 0;
+        int nearesthospital = -1;
+        int shortestpathlength = -1;
+        // Find shortest path for all vertices 
+        for (int count = 0; count < V - 1; count++) { 
+            // Pick the minimum distance vertex from the set of vertices 
+            // not yet processed. u is always equal to src in first 
+            // iteration. 
+        	
+	            int u = minDistance(dist, sptSet); 
+	  
+	            // Mark the picked vertex as processed 
+	            sptSet[u] = true; 
+	  
+	            // Update dist value of the adjacent vertices of the 
+	            // picked vertex. 
+	            for (int v = 0; v < V; v++) {
+	            	
+	                // Update dist[v] only if is not in sptSet, there is an 
+	                // edge from u to v, and total weight of path from src to 
+	                // v through u is smaller than current value of dist[v] 
+	                if (!sptSet[v] && graph[u][v] != 0 && dist[u] != Integer.MAX_VALUE && dist[u] + graph[u][v] < dist[v]) 
+	                    dist[v] = dist[u] + graph[u][v]; 
+
+	            }
+	       
+	         if(count == arritem) {
+	   	    	 if(shortestpathlength == -1 || shortestpathlength > dist[count]) {
+	   	         	shortestpathlength = dist[count];
+	   	         	nearesthospital = arritem;
+	   	         }
+	   	         if(arrindex + 1 != hospitalArr.length) {
+	   	         	
+	   		            arritem =  hospitalArr[arrindex+1];
+	   		            arrindex++;
+	   	
+	   	         }
+	   	     }
+	           
+        } 
+	   
+        // print the constructed distance array 
+        printSolution(shortestpathlength,nearesthospital); 
+      //  printSolution(dist);
     }
     
-    
-    // Driver Code 
-    public GraphModel()
-    { 
-        // Creating a graph with 1088092  vertices 
-     
-        adj = new ArrayList<ArrayList<Integer> >(V); 
+    public int[] hospitalArr() {
+    	 int distsize = 0;
+		 int[] hospitalarr = new int[distsize];
+		 BufferedReader br = null; 
+	        
+		  try {
+	            br = new BufferedReader(new FileReader("karate/hospital.txt"));
+	         
+	            Scanner scan = new Scanner(br);
+	            String FirstLine = br.readLine();
+	            String[] FirstLinearr = FirstLine.split("\\s+");
+ 			    distsize = Integer.parseInt(FirstLinearr[1]);
+	            hospitalarr = new int[distsize];
+	            
+ 				for(int i=0; i<distsize; i++) {
+ 					
+		            if(scan.hasNextLine()) {
+		          	  hospitalarr[i] = Integer.parseInt(scan.nextLine());
+		          	
+		            }
 
-        for (int i = 0; i < V; i++) 
-            adj.add(new ArrayList<Integer>()); 
-
-		BufferedReader br = null; 
-        
-        try {
-            br = new BufferedReader(new FileReader("karate/roadNet-PA_demo.txt"));
-            br.readLine();
-            Scanner scan = new Scanner(br);
-            String ss = "";
-            while(scan.hasNextLine()) {
-          	  ss = scan.nextLine(); 
-                if(!ss.startsWith("#")) { 
-              	  String[] arr = ss.split("\\s+");
-      				
-                      addEdge(adj, Integer.parseInt(arr[0]),Integer.parseInt(arr[1]));
-  	    		} 
-            }
-           
-        } catch (FileNotFoundException e1) {
-            // TODO Auto-generated catch block
-            e1.printStackTrace();
-        } catch (NumberFormatException e1) {
-            // TODO Auto-generated catch block
-            e1.printStackTrace();
-        } catch (IOException e1) {
-            // TODO Auto-generated catch block
-            e1.printStackTrace();
-        }finally {
-            try {
-                br.close();
-            }catch(Exception e1){
-                System.out.println(""+e1);
-            }
-        }
-
-       
-    } 
+ 				}
+	           
+	        } catch (FileNotFoundException e1) {
+	            // TODO Auto-generated catch block
+	            e1.printStackTrace();
+	        } catch (NumberFormatException e1) {
+	            // TODO Auto-generated catch block
+	            e1.printStackTrace();
+	        } catch (IOException e1) {
+	            // TODO Auto-generated catch block
+	            e1.printStackTrace();
+	        }finally {
+	            try {
+	                br.close();
+	            }catch(Exception e1){
+	                System.out.println(""+e1);
+	            }
+	        }
+		  
+		  for (int index = 1; index < hospitalarr.length; index++)
+			{
+				int key = hospitalarr[index];
+				int position = index;
+				// Shift larger values to the right
+				while (position > 0 && hospitalarr[position-1] - key > 0)
+				{
+					hospitalarr[position] = hospitalarr[position-1];
+					position--;
+				}
+				hospitalarr[position] = key;
+			}
+		
+		  return hospitalarr;
+    }
+  
 }

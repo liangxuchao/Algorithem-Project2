@@ -27,7 +27,7 @@ public class Demo {
 		graph.setStrict(false);
 		graph.display();
 		int lineNumber = 1;
-		GraphModel Model = new GraphModel();
+		GraphModel_old Model = new GraphModel_old();
 		for(int i=0; i< Model.adj.size(); i++) {
 
 			
@@ -44,7 +44,7 @@ public class Demo {
 			node.setAttribute("ui.label", node.getId());
 		}
 		// Test with source and dest variable to see shortest path
-		 int source = 107;
+		 int source = 284;
 		 int distsize = 0;
 		 int[] hospitalarr = new int[distsize];
 		 BufferedReader br = null; 
