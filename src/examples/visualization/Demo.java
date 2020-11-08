@@ -16,9 +16,24 @@ import org.graphstream.stream.GraphParseException;
 
 public class Demo {
 	
-	
-	
 	public static void main(String args[]) {
+		
+		
+		int maxnode;
+		int source;
+		Scanner scan2 = new Scanner(System.in);
+		System.out.print ("\nWhat is the maximum node? ");
+		maxnode = scan2.nextInt();
+		
+		System.out.print ("\nDefine the source node? ");
+		source = scan2.nextInt();
+		
+		System.out.print ("\nDefine the number of shorest path to the hospital? ");
+		source = scan2.nextInt();
+		
+		
+		GraphModel_old Model = new GraphModel_old(maxnode);
+		
 		System.setProperty("org.graphstream.ui", "swing");
 		Graph graph = new SingleGraph("demo");
 
@@ -27,7 +42,7 @@ public class Demo {
 		graph.setStrict(false);
 		graph.display();
 		int lineNumber = 1;
-		GraphModel_old Model = new GraphModel_old();
+		
 		for(int i=0; i< Model.adj.size(); i++) {
 
 			
@@ -44,7 +59,8 @@ public class Demo {
 			node.setAttribute("ui.label", node.getId());
 		}
 		// Test with source and dest variable to see shortest path
-		 int source = 284;
+	
+		
 		 int distsize = 0;
 		 int[] hospitalarr = new int[distsize];
 		 BufferedReader br = null; 

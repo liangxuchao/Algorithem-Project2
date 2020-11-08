@@ -19,7 +19,7 @@ public class GraphModel_old {
     } 
     
     // Maximum node can be on the graph
-    public static    int V = 1100000 ; 
+    public static    int V = 0 ; 
     // A utility function to print the adjacency list 
     // representation of graph 
     static void printGraph(ArrayList<ArrayList<Integer> > adj) 
@@ -64,7 +64,7 @@ public class GraphModel_old {
 	// from s
 		int pred[] = new int[V];
 		int dist[] = new int[V];
-
+		
 		// LinkedList to store path
 		LinkedList<Integer> path = new LinkedList<Integer>();
 		if (BFS(adj, s, dest, V, pred, dist) == false) {
@@ -132,16 +132,17 @@ public class GraphModel_old {
                         return true;
                 }
             }
+            
         }
         return false;
     }
     
     
     // Driver Code 
-    public GraphModel_old()
+    public GraphModel_old(int maxnode)
     { 
         // Creating a graph with  vertices 
-     
+    	this.V = maxnode;
         adj = new ArrayList<ArrayList<Integer> >(V); 
 
         for (int i = 0; i < V; i++) 

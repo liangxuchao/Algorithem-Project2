@@ -27,7 +27,19 @@ public class MainApp {
 	    	//display graph for demo purpose - time complexity should be ignored
 	    	System.setProperty("org.graphstream.ui", "swing");
 			Graph graph = new SingleGraph("demo");
-			int maxnode = 1100000;
+			
+			int maxnode;
+			int source;
+			Scanner scan2 = new Scanner(System.in);
+			System.out.print ("\nWhat is the maximum node? ");
+			maxnode = scan2.nextInt();
+			
+			System.out.print ("\nDefine the source node? ");
+			source = scan2.nextInt();
+			
+			System.out.print ("\nDefine the number of shorest path to the hospital? ");
+			source = scan2.nextInt();
+			
 			graph.setAttribute("ui.stylesheet", styleSheet);
 			graph.setAutoCreate(true);
 			graph.setStrict(false);
@@ -51,7 +63,7 @@ public class MainApp {
 		              			graph2DArr[node1][node2] = 1;
 		              		}
 		              		
-		              	  	//  graph.addEdge(Integer.parseInt(arr[0]) + "_" + Integer.parseInt(arr[1]), Integer.parseInt(arr[0]),  Integer.parseInt(arr[1]));
+		              	  	  graph.addEdge(arr[0] + "_" + arr[1], arr[0],  arr[1]);
 						
 		  	    		} 
 		                
@@ -82,7 +94,7 @@ public class MainApp {
 			
 	        /* Let us create the example graph discussed above */
 			
-	        GraphModel t = new GraphModel(maxnode); 
+	        GraphModel_2DArrayForDJAlgo t = new GraphModel_2DArrayForDJAlgo(maxnode); 
 	        t.dijkstra(graph2DArr, 0); 
 	    } 
 

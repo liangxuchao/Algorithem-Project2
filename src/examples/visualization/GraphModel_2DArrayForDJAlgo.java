@@ -7,11 +7,11 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.*; 
  
-public class GraphModel {
+public class GraphModel_2DArrayForDJAlgo {
 	// A utility function to find the vertex with minimum distance value, 
     // from the set of vertices not yet included in shortest path tree 
     static int V = 0; 
-    public GraphModel(int maxnode) {
+    public GraphModel_2DArrayForDJAlgo(int maxnode) {
 		this.V = maxnode;
 	}
 
@@ -38,9 +38,14 @@ public class GraphModel {
     } 
     void printSolution(int distance, int hospitalVertex) 
     { 
+    	if(distance != Integer.MAX_VALUE) {
+    	
     	System.out.println("Nearest hospital from Source " + hospitalVertex + "\n"); 
     	System.out.println("Number of edge " + distance); 
-        
+    	
+    	}else {
+    		System.out.print("There is no paths connected to the hospital listed");
+    	}
     } 
     // Function that implements Dijkstra's single source shortest path 
     // algorithm for a graph represented using adjacency matrix 
