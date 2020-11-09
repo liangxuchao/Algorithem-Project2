@@ -37,7 +37,7 @@ public class GraphModel {
 		BufferedReader br = null; 
         
         try {
-            br = new BufferedReader(new FileReader("karate/roadNet-PA_demo.txt"));
+            br = new BufferedReader(new FileReader("karate/roadNet-PA_fullData.txt"));
             br.readLine();
             Scanner scan = new Scanner(br);
             String ss = "";

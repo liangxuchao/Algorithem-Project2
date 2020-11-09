@@ -31,6 +31,7 @@ public class MainProgram {
 	   int temppathcount = templist.size();
    	
 	   System.out.println("Shortest path length is: " + temppathcount);
+	   System.out.println("Destination Hospital: " + templist.getFirst());
 		
 		// Print path
 		System.out.println("Path is ::");
