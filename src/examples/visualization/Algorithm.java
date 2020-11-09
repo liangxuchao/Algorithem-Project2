@@ -11,6 +11,8 @@ public class Algorithm {
         this.V = V;
         this.Model = M;
     }
+    
+ 
 
     public ArrayList<ArrayList<Integer>> printTopNShortest(int s, int n){
 
@@ -18,27 +20,37 @@ public class Algorithm {
         int dist[] = new int[V];
         ArrayList<ArrayList<Integer>> paths = new ArrayList<>();
         int count=0;
-
-        ArrayList<BFSResult> BFSResult = BFS2(Model, s, V, pred, dist);
-        if (BFSResult.size()==0) {
-            return paths;
-        }else{
-            for(examples.visualization.BFSResult result: BFSResult){
-                count++;
-                ArrayList<Integer> path = new ArrayList<>();
-                int crawl = result.Target;
-                path.add(crawl);
-                while (pred[crawl] != -1) {
-                    path.add(pred[crawl]);
-                    crawl = pred[crawl];
-                }
-
-                paths.add(path);
-                if(count >= n)
-                    break;
-            }
+        
+        if(Model.adj.get(s).getishospital() == true) {
+        	ArrayList<Integer> path = new ArrayList<>();
+        	path.add(s);
+        	paths.add(path);
+        	n = n-1;
         }
+        
+        if(n > 0) {
+        	
+	        ArrayList<BFSResult> BFSResult = BFS2(Model, s, V, pred, dist);
+	        if (BFSResult.size()==0) {
+	            return paths;
+	        }else{
+	            for(examples.visualization.BFSResult result: BFSResult){
+	                count++;
+	                ArrayList<Integer> path = new ArrayList<>();
+	                int crawl = result.Target;
+	                path.add(crawl);
+	                while (pred[crawl] != -1) {
+	                    path.add(pred[crawl]);
+	                    crawl = pred[crawl];
+	                }
+	
+	                paths.add(path);
+	                if(count >= n)
+	                    break;
+	            }
+	        }
 
+        }
         return paths;
     }
 

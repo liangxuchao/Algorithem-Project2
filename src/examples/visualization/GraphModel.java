@@ -19,7 +19,7 @@ public class GraphModel {
     } 
     
     public static int V = 0 ; 
- 	public GraphModel(int maxnode)
+ 	public GraphModel(int maxnode, String inputfilename)
     { 
         // Creating a graph with  vertices 
     	this.V = maxnode;
@@ -37,7 +37,7 @@ public class GraphModel {
 		BufferedReader br = null; 
         
         try {
-            br = new BufferedReader(new FileReader("karate/roadNet-PA_fullData.txt"));
+            br = new BufferedReader(new FileReader(inputfilename));
             br.readLine();
             Scanner scan = new Scanner(br);
             String ss = "";
@@ -88,8 +88,12 @@ public class GraphModel {
 					for(int i=0; i<distsize; i++) {
 						
 			            if(scan.hasNextLine()) {
+			            	int nexInt = Integer.parseInt(scan.nextLine());
+			          	  if(nexInt<= V ) {
+
+			          		adj.get(nexInt).Setishospital(true);
+			          	  }
 			          	  
-			          	  adj.get(Integer.parseInt(scan.nextLine())).Setishospital(true);
 			            }
 	
 					}

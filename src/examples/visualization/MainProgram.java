@@ -14,18 +14,29 @@ public class MainProgram {
     public static void main(String[] args) {
 
         BufferedReader br = null;
-        final int MAX_NODE = 1100000;
+        int MAX_NODE = 100;
         int source;
         int n=1;
-
+        int inputfileoption = 1;
+        String inputfilename = "karate/Demo.txt";
         Scanner scan2 = new Scanner(System.in);
-        System.out.print("\nWhat is the top N nearest? ");
+        
+        System.out.print("\nChoose the mode of execution? ");
+
+        System.out.print("\n1.Demo (100 nodes) 2.Full Data (over 1 million nodes) ");
+        inputfileoption = scan2.nextInt();
+        if(inputfileoption == 2){
+        	inputfilename = "karate/roadmap_fullData.txt";
+        	MAX_NODE = 1500000;
+        }
+        
+        System.out.print("\nInput n for top n path to the hospital? ");
         n = scan2.nextInt();
         if(n < 1 || n>=MAX_NODE){
             System.out.println("\n Your input is invalid!");
             return;
         }
-
+        
         System.out.print("\nDefine the source node? ");
         source = scan2.nextInt();
         if(source < 1 || source>=MAX_NODE){
@@ -33,7 +44,8 @@ public class MainProgram {
             return;
         }
 
-        GraphModel model = new GraphModel(MAX_NODE);
+        
+        GraphModel model = new GraphModel(MAX_NODE, inputfilename);
         Algorithm algo = new Algorithm(MAX_NODE, model);
 
         ArrayList<ArrayList<Integer>> topNList = algo.printTopNShortest(source, n);
@@ -42,14 +54,21 @@ public class MainProgram {
         for (ArrayList<Integer> item : topNList) {
             int pathCount = item.size();
             System.out.println(String.format("\n\nTop %d route", ++topN));
+            System.out.println("Destinated hospital: " + item.get(0));
             System.out.println("Shortest path length is: " + pathCount);
-
+            
             System.out.println("Path is :");
             for (int i = pathCount - 1; i >= 0; i--) {
                 System.out.print(item.get(i) + " ");
             }
         }
 
+        if(inputfileoption == 1) {
+
+            DisplayGraph Display = new DisplayGraph(model,topNList,MAX_NODE,source);
+          
+        }
+        
     }
 
 

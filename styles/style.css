@@ -3,17 +3,25 @@ graph {
 	size:2000px;
 }
 edge {
-	size:10px;
+	size:5px;
 	/*shape:cubic-curve;*/
 	/*shape:blob;*/
 	/*fill-color: rgb(127,0,55);*/
 }
 
 node{
-	size:60px;
+	size:20px;
 	text-size:16px;
-	text-color:rgb(255,255,255);
+	text-color:black;
 	stroke-mode:plain;
 	stroke-width:2px;
 	stroke-color:#FFF8;
+}
+
+ node.important {
+        fill-color: red;
+    }
+
+node.source{
+fill-color: blue;
 }
