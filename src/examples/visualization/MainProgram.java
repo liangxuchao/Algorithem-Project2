@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
+import java.io.FileWriter;   // Import the FileWriter class
+import java.io.IOException;  // Import the IOException class to handle errors
 
 public class MainProgram {
 
@@ -51,24 +53,46 @@ public class MainProgram {
         ArrayList<ArrayList<Integer>> topNList = algo.printTopNShortest(source, n);
 
         int topN = 0;
+        String resultString = "";
         for (ArrayList<Integer> item : topNList) {
             int pathCount = item.size();
             System.out.println(String.format("\n\nTop %d route", ++topN));
             System.out.println("Destinated hospital: " + item.get(0));
             System.out.println("Shortest path length is: " + pathCount);
-            
             System.out.println("Path is :");
+            
+            resultString += "Top " + (topN) + " route";
+            resultString += "\nDestinated hospital: " + item.get(0);
+            resultString += "\nShortest path length is: " + pathCount;
+            resultString += "\nPath is : ";
+            
             for (int i = pathCount - 1; i >= 0; i--) {
                 System.out.print(item.get(i) + " ");
+                resultString += item.get(i) + " ";
             }
+            
+            resultString += "\n\n";
         }
-
+        WriteToFile(resultString);
+        
         if(inputfileoption == 1) {
 
             DisplayGraph Display = new DisplayGraph(model,topNList,MAX_NODE,source);
           
         }
         
+    }
+    
+    public static void WriteToFile (String text) {
+    	 try {
+    	      FileWriter myWriter = new FileWriter("OutPut/OutPut.txt");
+    	      myWriter.write(text);
+    	      myWriter.close();
+    	      System.out.println("\nSuccessfully wrote to the file.");
+    	    } catch (IOException e) {
+    	      System.out.println("\nAn error occurred.");
+    	      e.printStackTrace();
+    	    }
     }
 
 
