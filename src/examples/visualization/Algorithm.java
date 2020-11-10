@@ -12,7 +12,7 @@ public class Algorithm {
         this.Model = M;
     }
     
- 
+    
 
     public ArrayList<ArrayList<Integer>> printTopNShortest(int s, int n){
 
