@@ -1,6 +1,6 @@
 # Undirected graph (each unordered pair of nodes is saved once): Demo.txt 
 # Algorithm test data
-# Nodes: 100 Edges: 200
+# Nodes: 100 
 # FromNodeId	ToNodeId
 0	1
 0	2

@@ -16,7 +16,7 @@ public class MainProgram {
     public static void main(String[] args) {
 
         BufferedReader br = null;
-        int MAX_NODE = 100;
+        int MAX_NODE = 2000;
         int source;
         int n = 1;
         int inputfileoption = 1;
@@ -47,7 +47,7 @@ public class MainProgram {
         if (isDemo == 1) {
             System.out.print("\nDefine the source node? ");
             source = scan2.nextInt();
-            if (source < 1 || source >= MAX_NODE) {
+            if (source < 0 || source >= MAX_NODE) {
                 System.out.println("\n Your input is invalid!");
                 return;
             }
@@ -100,6 +100,7 @@ public class MainProgram {
             System.out.println("Destinated hospital: " + item.get(0));
             System.out.println("Shortest path length is: " + pathCount);
             System.out.println("Path is :");
+
 
 
             resultString += String.format("NodeId: %d\n", topNList.NodeId);
