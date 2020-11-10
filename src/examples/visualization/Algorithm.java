@@ -38,7 +38,7 @@ public class Algorithm {
 
         if (n > 0) {
 
-            ArrayList<BFSResult> BFSResult = BFS(Model, src, V, pred, dist);
+            ArrayList<BFSResult> BFSResult = BFS(Model, src, V, pred, dist, n);
             if (BFSResult.size() == 0) {
                 return new NodeResult(0,paths);
             } else {
