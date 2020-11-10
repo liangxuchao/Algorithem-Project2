@@ -29,11 +29,11 @@ public class DisplayGraph {
 		
 		for(int i=0; i< Model.adj.size(); i++) {
 
-			for(int j=0; j< Model.adj.get(i).gettargetNodes().size(); j++) {
-				graph.addEdge(i + "_" + Model.adj.get(i).gettargetNodes().get(j), Integer.toString(i),  Integer.toString(Model.adj.get(i).gettargetNodes().get(j)));
+			for(int j=0; j< Model.adj.get(i).getTargetNodes().size(); j++) {
+				graph.addEdge(i + "_" + Model.adj.get(i).getTargetNodes().get(j), Integer.toString(i),  Integer.toString(Model.adj.get(i).getTargetNodes().get(j)));
 				
 			}	
-			if(Model.adj.get(i).getishospital() == true) {
+			if(Model.adj.get(i).getIsHospital() == true) {
 				hospitalarr.add(i);
 			}
 		}

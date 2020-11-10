@@ -21,7 +21,7 @@ public class Algorithm {
         ArrayList<ArrayList<Integer>> paths = new ArrayList<>();
         int count=0;
         
-        if(Model.adj.get(s).getishospital() == true) {
+        if(Model.adj.get(s).getIsHospital() == true) {
         	ArrayList<Integer> path = new ArrayList<>();
         	path.add(s);
         	paths.add(path);
@@ -30,7 +30,7 @@ public class Algorithm {
         
         if(n > 0) {
         	
-	        ArrayList<BFSResult> BFSResult = BFS2(Model, s, V, pred, dist);
+	        ArrayList<BFSResult> BFSResult = BFS(Model, s, V, pred, dist);
 	        if (BFSResult.size()==0) {
 	            return paths;
 	        }else{
@@ -58,7 +58,7 @@ public class Algorithm {
     // a modified version of BFS that stores predecessor
     // of each vertex in array pred
     // and its distance from source in array dist
-    private ArrayList<BFSResult> BFS2(GraphModel Model, int src
+    private ArrayList<BFSResult> BFS(GraphModel Model, int src
             , int v, int pred[], int dist[]) {
         // a queue to maintain queue of vertices whose
         // adjacency list is to be scanned as per normal
@@ -93,17 +93,16 @@ public class Algorithm {
         while (!queue.isEmpty()) {
             int u = queue.remove();
 
+            for (int i = 0; i < Model.adj.get(u).getTargetNodes().size(); i++) {
+                int target = Model.adj.get(u).getTargetNodes().get(i);
+                if (visited[target] == false) {
+                    visited[target] = true;
+                    dist[target] = dist[u] + 1;
+                    pred[target] = u;
+                    queue.add(target);
 
-            for (int i = 0; i < Model.adj.get(u).gettargetNodes().size(); i++) {
-                if (visited[Model.adj.get(u).gettargetNodes().get(i)] == false) {
-                    visited[Model.adj.get(u).gettargetNodes().get(i)] = true;
-                    dist[Model.adj.get(u).gettargetNodes().get(i)] = dist[u] + 1;
-                    pred[Model.adj.get(u).gettargetNodes().get(i)] = u;
-                    queue.add(Model.adj.get(u).gettargetNodes().get(i));
-
-                    int target = Model.adj.get(u).gettargetNodes().get(i);
-                    if (Model.adj.get(target).getishospital() == true && dist[target] > 0) {
-
+                    boolean isHospital = Model.adj.get(target).getIsHospital();
+                    if (isHospital && dist[target] > 0) {
                         BFSResult result = new BFSResult();
                         result.Rank = rank;
                         result.Target=target;

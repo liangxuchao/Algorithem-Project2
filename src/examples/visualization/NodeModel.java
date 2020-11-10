@@ -21,11 +21,11 @@ public class NodeModel {
 		this.ishospital = s;
 	}
 	
-	public ArrayList<Integer> gettargetNodes(){
+	public ArrayList<Integer> getTargetNodes(){
 		return this.targetNodes;
 	}
 	
-	public boolean getishospital(){
+	public boolean getIsHospital(){
 		return this.ishospital;
 	}
 }
