@@ -11,8 +11,7 @@ public class Algorithm {
         this.V = V;
         this.Model = M;
     }
-
-
+    
     public ArrayList<NodeResult> getEachTopNShortest(int n) {
         ArrayList<NodeResult> results = new ArrayList<>();
         for (int i = 0; i < Model.adj.size(); i++) {
