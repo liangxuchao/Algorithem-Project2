@@ -18,7 +18,7 @@ public class MainProgram {
     public static void main(String[] args) {
 
         BufferedReader br = null;
-        int MAX_NODE = 100;
+        int MAX_NODE = 2000;
         int source;
         int n = 1;
         int inputfileoption = 1;
@@ -49,7 +49,7 @@ public class MainProgram {
         if (isDemo == 1) {
             System.out.print("\nDefine the source node? ");
             source = scan2.nextInt();
-            if (source < 1 || source >= MAX_NODE) {
+            if (source < 0 || source >= MAX_NODE) {
                 System.out.println("\n Your input is invalid!");
                 return;
             }
@@ -95,17 +95,15 @@ public class MainProgram {
         for (ArrayList<Integer> item : topNList.PathList) {
             int pathCount = item.size();
             System.out.println(String.format("NodeId: %d", topNList.NodeId));
-            System.out.println(String.format("\nTop %d path", ++topN));
+            System.out.println(String.format("\nRank %d nearest hospital", ++topN));
             System.out.println("Destinated hospital: " + item.get(0));
-            System.out.println("Shortest path length is: " + pathCount);
+            System.out.println("Shortest path length is: " + (pathCount -1));
             System.out.println("Path is :");
 
-
-
             resultString += String.format("NodeId: %d\n", topNList.NodeId);
-            resultString += "\nTop " + (topN) + " path";
+            resultString += "\nRank " + (topN) + " nearest hospital";
             resultString += "\nDestinated hospital: " + item.get(0);
-            resultString += "\nShortest path length is: " + pathCount;
+            resultString += "\nShortest path length is: " + (pathCount -1);
             resultString += "\nPath is : ";
 
             for (int i = pathCount - 1; i >= 0; i--) {

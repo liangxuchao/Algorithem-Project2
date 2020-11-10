@@ -39,7 +39,7 @@ public class Algorithm {
 
         if (n > 0) {
 
-            ArrayList<BFSResult> BFSResult = BFS(Model, src, V, pred, dist);
+            ArrayList<BFSResult> BFSResult = BFS(Model, src, V, pred, dist,n);
             if (BFSResult.size() == 0) {
                 return new NodeResult(0,paths);
             } else {
@@ -54,8 +54,7 @@ public class Algorithm {
                     }
 
                     paths.add(path);
-                    if (count >= n)
-                        break;
+                   
                 }
             }
 
@@ -71,7 +70,7 @@ public class Algorithm {
     // of each vertex in array pred
     // and its distance from source in array dist
     private ArrayList<BFSResult> BFS(GraphModel Model, int src
-            , int v, int pred[], int dist[]) {
+            , int v, int pred[], int dist[], int n) {
         // a queue to maintain queue of vertices whose
         // adjacency list is to be scanned as per normal
         // BFS algorithm using LinkedList of Integer type
@@ -114,12 +113,13 @@ public class Algorithm {
                     queue.add(target);
 
                     boolean isHospital = Model.adj.get(target).getIsHospital();
-                    if (isHospital && dist[target] > 0) {
+                    if (isHospital && dist[target] > 0 && n>0) {
                         BFSResult result = new BFSResult();
                         result.Rank = rank;
                         result.Target = target;
                         rank++;
                         results.add(result);
+                        n = n-1;
                     }
                 }
             }
