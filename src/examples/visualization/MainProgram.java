@@ -41,7 +41,7 @@ public class MainProgram {
         
         System.out.print("\nDefine the source node? ");
         source = scan2.nextInt();
-        if(source < 1 || source>=MAX_NODE){
+        if(source < 0 || source>=MAX_NODE){
             System.out.println("\n Your input is invalid!");
             return;
         }

@@ -1,10 +1,10 @@
 Top 1 route
-Destinated hospital: 20
-Shortest path length is: 1
-Path is : 20 
+Destinated hospital: 3
+Shortest path length is: 2
+Path is : 0 3 
 
 Top 2 route
 Destinated hospital: 6
-Shortest path length is: 6
-Path is : 20 14 12 9 5 6 
+Shortest path length is: 2
+Path is : 0 6 
 
