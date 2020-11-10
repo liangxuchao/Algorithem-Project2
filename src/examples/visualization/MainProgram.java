@@ -56,14 +56,14 @@ public class MainProgram {
         String resultString = "";
         for (ArrayList<Integer> item : topNList) {
             int pathCount = item.size();
-            System.out.println(String.format("\n\nTop %d route", ++topN));
+            System.out.println(String.format("\n\nTop %d hospital", ++topN));
             System.out.println("Destinated hospital: " + item.get(0));
-            System.out.println("Shortest path length is: " + pathCount);
+            System.out.println("Shortest path length is: " + (pathCount - 1));
             System.out.println("Path is :");
             
-            resultString += "Top " + (topN) + " route";
+            resultString += "Top " + (topN) + " hospital";
             resultString += "\nDestinated hospital: " + item.get(0);
-            resultString += "\nShortest path length is: " + pathCount;
+            resultString += "\nShortest path length is: " + (pathCount - 1);
             resultString += "\nPath is : ";
             
             for (int i = pathCount - 1; i >= 0; i--) {
