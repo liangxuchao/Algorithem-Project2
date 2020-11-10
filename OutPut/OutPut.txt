@@ -1,10 +1,1160 @@
-Top 1 route
+NodeId: 0
+
+Top 1 path
+Destinated hospital: 6
+Shortest path length is: 3
+Path is : 0 1 6 NodeId: 0
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 7
+Path is : 0 2 7 16 18 24 20 
+=======================================
+NodeId: 1
+
+Top 1 path
+Destinated hospital: 6
+Shortest path length is: 2
+Path is : 1 6 NodeId: 1
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 7
+Path is : 1 6 5 9 12 14 20 
+=======================================
+NodeId: 2
+
+Top 1 path
+Destinated hospital: 6
+Shortest path length is: 4
+Path is : 2 0 1 6 NodeId: 2
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 6
+Path is : 2 7 16 18 24 20 
+=======================================
+NodeId: 3
+
+Top 1 path
+Destinated hospital: 6
+Shortest path length is: 4
+Path is : 3 0 1 6 NodeId: 3
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 7
+Path is : 3 2 7 16 18 24 20 
+=======================================
+NodeId: 4
+
+Top 1 path
 Destinated hospital: 6
 Shortest path length is: 5
-Path is : 4 2 0 1 6 
+Path is : 4 2 0 1 6 NodeId: 4
 
-Top 2 route
+Top 2 path
 Destinated hospital: 20
 Shortest path length is: 7
 Path is : 4 2 7 16 18 24 20 
+=======================================
+NodeId: 5
 
+Top 1 path
+Destinated hospital: 6
+Shortest path length is: 2
+Path is : 5 6 NodeId: 5
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 5
+Path is : 5 9 12 14 20 
+=======================================
+NodeId: 6
+
+Top 1 path
+Destinated hospital: 6
+Shortest path length is: 1
+Path is : 6 NodeId: 6
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 6
+Path is : 6 5 9 12 14 20 
+=======================================
+NodeId: 7
+
+Top 1 path
+Destinated hospital: 6
+Shortest path length is: 4
+Path is : 7 8 5 6 NodeId: 7
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 5
+Path is : 7 16 18 24 20 
+=======================================
+NodeId: 8
+
+Top 1 path
+Destinated hospital: 6
+Shortest path length is: 3
+Path is : 8 5 6 NodeId: 8
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 6
+Path is : 8 7 16 18 24 20 
+=======================================
+NodeId: 9
+
+Top 1 path
+Destinated hospital: 6
+Shortest path length is: 3
+Path is : 9 5 6 NodeId: 9
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 4
+Path is : 9 12 14 20 
+=======================================
+NodeId: 10
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 9
+Path is : 10 11 44 45 40 36 34 32 30 NodeId: 10
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 11
+Path is : 10 11 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 11
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 8
+Path is : 11 44 45 40 36 34 32 30 NodeId: 11
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 10
+Path is : 11 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 12
+
+Top 1 path
+Destinated hospital: 20
+Shortest path length is: 3
+Path is : 12 14 20 NodeId: 12
+
+Top 2 path
+Destinated hospital: 6
+Shortest path length is: 4
+Path is : 12 9 5 6 
+=======================================
+NodeId: 13
+
+Top 1 path
+Destinated hospital: 20
+Shortest path length is: 4
+Path is : 13 12 14 20 NodeId: 13
+
+Top 2 path
+Destinated hospital: 6
+Shortest path length is: 5
+Path is : 13 12 9 5 6 
+=======================================
+NodeId: 14
+
+Top 1 path
+Destinated hospital: 20
+Shortest path length is: 2
+Path is : 14 20 NodeId: 14
+
+Top 2 path
+Destinated hospital: 6
+Shortest path length is: 5
+Path is : 14 12 9 5 6 
+=======================================
+NodeId: 15
+
+Top 1 path
+Destinated hospital: 20
+Shortest path length is: 3
+Path is : 15 14 20 NodeId: 15
+
+Top 2 path
+Destinated hospital: 6
+Shortest path length is: 6
+Path is : 15 14 12 9 5 6 
+=======================================
+NodeId: 16
+
+Top 1 path
+Destinated hospital: 20
+Shortest path length is: 4
+Path is : 16 18 24 20 NodeId: 16
+
+Top 2 path
+Destinated hospital: 6
+Shortest path length is: 5
+Path is : 16 7 8 5 6 
+=======================================
+NodeId: 17
+
+Top 1 path
+Destinated hospital: 20
+Shortest path length is: 5
+Path is : 17 16 18 24 20 NodeId: 17
+
+Top 2 path
+Destinated hospital: 6
+Shortest path length is: 6
+Path is : 17 16 7 8 5 6 
+=======================================
+NodeId: 18
+
+Top 1 path
+Destinated hospital: 20
+Shortest path length is: 3
+Path is : 18 24 20 NodeId: 18
+
+Top 2 path
+Destinated hospital: 6
+Shortest path length is: 6
+Path is : 18 16 7 8 5 6 
+=======================================
+NodeId: 19
+
+Top 1 path
+Destinated hospital: 20
+Shortest path length is: 2
+Path is : 19 20 NodeId: 19
+
+Top 2 path
+Destinated hospital: 30
+Shortest path length is: 5
+Path is : 19 25 29 27 30 
+=======================================
+NodeId: 20
+
+Top 1 path
+Destinated hospital: 20
+Shortest path length is: 1
+Path is : 20 NodeId: 20
+
+Top 2 path
+Destinated hospital: 6
+Shortest path length is: 6
+Path is : 20 14 12 9 5 6 
+=======================================
+NodeId: 21
+
+Top 1 path
+Destinated hospital: 20
+Shortest path length is: 3
+Path is : 21 19 20 NodeId: 21
+
+Top 2 path
+Destinated hospital: 30
+Shortest path length is: 6
+Path is : 21 19 25 29 27 30 
+=======================================
+NodeId: 22
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 8
+Path is : 22 44 45 40 36 34 32 30 NodeId: 22
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 10
+Path is : 22 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 23
+
+Top 1 path
+Destinated hospital: 20
+Shortest path length is: 3
+Path is : 23 24 20 NodeId: 23
+
+Top 2 path
+Destinated hospital: 30
+Shortest path length is: 6
+Path is : 23 19 25 29 27 30 
+=======================================
+NodeId: 24
+
+Top 1 path
+Destinated hospital: 20
+Shortest path length is: 2
+Path is : 24 20 NodeId: 24
+
+Top 2 path
+Destinated hospital: 6
+Shortest path length is: 7
+Path is : 24 20 14 12 9 5 6 
+=======================================
+NodeId: 25
+
+Top 1 path
+Destinated hospital: 20
+Shortest path length is: 3
+Path is : 25 19 20 NodeId: 25
+
+Top 2 path
+Destinated hospital: 30
+Shortest path length is: 4
+Path is : 25 29 27 30 
+=======================================
+NodeId: 26
+
+Top 1 path
+Destinated hospital: 20
+Shortest path length is: 4
+Path is : 26 25 19 20 NodeId: 26
+
+Top 2 path
+Destinated hospital: 30
+Shortest path length is: 5
+Path is : 26 25 29 27 30 
+=======================================
+NodeId: 27
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 2
+Path is : 27 30 NodeId: 27
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 5
+Path is : 27 29 25 19 20 
+=======================================
+NodeId: 28
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 3
+Path is : 28 27 30 NodeId: 28
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 6
+Path is : 28 27 29 25 19 20 
+=======================================
+NodeId: 29
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 3
+Path is : 29 27 30 NodeId: 29
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 4
+Path is : 29 25 19 20 
+=======================================
+NodeId: 30
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 1
+Path is : 30 NodeId: 30
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 6
+Path is : 30 27 29 25 19 20 
+=======================================
+NodeId: 31
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 2
+Path is : 31 30 NodeId: 31
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 7
+Path is : 31 30 27 29 25 19 20 
+=======================================
+NodeId: 32
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 2
+Path is : 32 30 NodeId: 32
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 7
+Path is : 32 30 27 29 25 19 20 
+=======================================
+NodeId: 33
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 3
+Path is : 33 32 30 NodeId: 33
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 8
+Path is : 33 32 30 27 29 25 19 20 
+=======================================
+NodeId: 34
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 3
+Path is : 34 32 30 NodeId: 34
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 7
+Path is : 34 36 37 26 25 19 20 
+=======================================
+NodeId: 35
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 4
+Path is : 35 34 32 30 NodeId: 35
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 8
+Path is : 35 34 36 37 26 25 19 20 
+=======================================
+NodeId: 36
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 4
+Path is : 36 34 32 30 NodeId: 36
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 6
+Path is : 36 37 26 25 19 20 
+=======================================
+NodeId: 37
+
+Top 1 path
+Destinated hospital: 20
+Shortest path length is: 5
+Path is : 37 26 25 19 20 NodeId: 37
+
+Top 2 path
+Destinated hospital: 30
+Shortest path length is: 5
+Path is : 37 36 34 32 30 
+=======================================
+NodeId: 38
+
+Top 1 path
+Destinated hospital: 20
+Shortest path length is: 4
+Path is : 38 23 24 20 NodeId: 38
+
+Top 2 path
+Destinated hospital: 30
+Shortest path length is: 7
+Path is : 38 23 19 25 29 27 30 
+=======================================
+NodeId: 39
+
+Top 1 path
+Destinated hospital: 20
+Shortest path length is: 5
+Path is : 39 38 23 24 20 NodeId: 39
+
+Top 2 path
+Destinated hospital: 30
+Shortest path length is: 8
+Path is : 39 38 23 19 25 29 27 30 
+=======================================
+NodeId: 40
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 5
+Path is : 40 36 34 32 30 NodeId: 40
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 7
+Path is : 40 36 37 26 25 19 20 
+=======================================
+NodeId: 41
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 17
+Path is : 41 57 64 66 73 79 81 61 50 51 44 45 40 36 34 32 30 NodeId: 41
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 19
+Path is : 41 57 64 66 73 79 81 61 50 51 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 42
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 18
+Path is : 42 41 57 64 66 73 79 81 61 50 51 44 45 40 36 34 32 30 NodeId: 42
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 20
+Path is : 42 41 57 64 66 73 79 81 61 50 51 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 43
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 18
+Path is : 43 41 57 64 66 73 79 81 61 50 51 44 45 40 36 34 32 30 NodeId: 43
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 20
+Path is : 43 41 57 64 66 73 79 81 61 50 51 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 44
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 7
+Path is : 44 45 40 36 34 32 30 NodeId: 44
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 9
+Path is : 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 45
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 6
+Path is : 45 40 36 34 32 30 NodeId: 45
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 8
+Path is : 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 46
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 18
+Path is : 46 56 57 64 66 73 79 81 61 50 51 44 45 40 36 34 32 30 NodeId: 46
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 20
+Path is : 46 56 57 64 66 73 79 81 61 50 51 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 47
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 19
+Path is : 47 46 56 57 64 66 73 79 81 61 50 51 44 45 40 36 34 32 30 NodeId: 47
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 21
+Path is : 47 46 56 57 64 66 73 79 81 61 50 51 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 48
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 20
+Path is : 48 54 62 68 78 82 87 99 95 81 61 50 51 44 45 40 36 34 32 30 NodeId: 48
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 22
+Path is : 48 54 62 68 78 82 87 99 95 81 61 50 51 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 49
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 21
+Path is : 49 55 47 46 56 57 64 66 73 79 81 61 50 51 44 45 40 36 34 32 30 NodeId: 49
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 23
+Path is : 49 55 47 46 56 57 64 66 73 79 81 61 50 51 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 50
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 9
+Path is : 50 51 44 45 40 36 34 32 30 NodeId: 50
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 11
+Path is : 50 51 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 51
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 8
+Path is : 51 44 45 40 36 34 32 30 NodeId: 51
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 10
+Path is : 51 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 52
+
+Top 1 path
+Destinated hospital: 20
+Shortest path length is: 5
+Path is : 52 38 23 24 20 NodeId: 52
+
+Top 2 path
+Destinated hospital: 30
+Shortest path length is: 8
+Path is : 52 38 23 19 25 29 27 30 
+=======================================
+NodeId: 53
+
+Top 1 path
+Destinated hospital: 20
+Shortest path length is: 6
+Path is : 53 52 38 23 24 20 NodeId: 53
+
+Top 2 path
+Destinated hospital: 30
+Shortest path length is: 9
+Path is : 53 52 38 23 19 25 29 27 30 
+=======================================
+NodeId: 54
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 19
+Path is : 54 62 68 78 82 87 99 95 81 61 50 51 44 45 40 36 34 32 30 NodeId: 54
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 21
+Path is : 54 62 68 78 82 87 99 95 81 61 50 51 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 55
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 20
+Path is : 55 47 46 56 57 64 66 73 79 81 61 50 51 44 45 40 36 34 32 30 NodeId: 55
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 22
+Path is : 55 47 46 56 57 64 66 73 79 81 61 50 51 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 56
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 17
+Path is : 56 57 64 66 73 79 81 61 50 51 44 45 40 36 34 32 30 NodeId: 56
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 19
+Path is : 56 57 64 66 73 79 81 61 50 51 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 57
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 16
+Path is : 57 64 66 73 79 81 61 50 51 44 45 40 36 34 32 30 NodeId: 57
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 18
+Path is : 57 64 66 73 79 81 61 50 51 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 58
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 9
+Path is : 58 22 44 45 40 36 34 32 30 NodeId: 58
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 11
+Path is : 58 22 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 59
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 18
+Path is : 59 65 75 80 86 89 79 81 61 50 51 44 45 40 36 34 32 30 NodeId: 59
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 20
+Path is : 59 65 75 80 86 89 79 81 61 50 51 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 60
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 19
+Path is : 60 59 65 75 80 86 89 79 81 61 50 51 44 45 40 36 34 32 30 NodeId: 60
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 21
+Path is : 60 59 65 75 80 86 89 79 81 61 50 51 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 61
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 10
+Path is : 61 50 51 44 45 40 36 34 32 30 NodeId: 61
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 12
+Path is : 61 50 51 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 62
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 18
+Path is : 62 68 78 82 87 99 95 81 61 50 51 44 45 40 36 34 32 30 NodeId: 62
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 20
+Path is : 62 68 78 82 87 99 95 81 61 50 51 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 63
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 19
+Path is : 63 62 68 78 82 87 99 95 81 61 50 51 44 45 40 36 34 32 30 NodeId: 63
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 21
+Path is : 63 62 68 78 82 87 99 95 81 61 50 51 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 64
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 15
+Path is : 64 66 73 79 81 61 50 51 44 45 40 36 34 32 30 NodeId: 64
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 17
+Path is : 64 66 73 79 81 61 50 51 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 65
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 17
+Path is : 65 75 80 86 89 79 81 61 50 51 44 45 40 36 34 32 30 NodeId: 65
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 19
+Path is : 65 75 80 86 89 79 81 61 50 51 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 66
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 14
+Path is : 66 73 79 81 61 50 51 44 45 40 36 34 32 30 NodeId: 66
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 16
+Path is : 66 73 79 81 61 50 51 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 67
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 6
+Path is : 67 40 36 34 32 30 NodeId: 67
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 8
+Path is : 67 40 36 37 26 25 19 20 
+=======================================
+NodeId: 68
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 17
+Path is : 68 78 82 87 99 95 81 61 50 51 44 45 40 36 34 32 30 NodeId: 68
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 19
+Path is : 68 78 82 87 99 95 81 61 50 51 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 69
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 9
+Path is : 69 22 44 45 40 36 34 32 30 NodeId: 69
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 11
+Path is : 69 22 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 70
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 10
+Path is : 70 58 22 44 45 40 36 34 32 30 NodeId: 70
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 12
+Path is : 70 58 22 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 71
+
+Top 1 path
+Destinated hospital: 20
+Shortest path length is: 6
+Path is : 71 52 38 23 24 20 NodeId: 71
+
+Top 2 path
+Destinated hospital: 30
+Shortest path length is: 9
+Path is : 71 52 38 23 19 25 29 27 30 
+=======================================
+NodeId: 72
+
+Top 1 path
+Destinated hospital: 20
+Shortest path length is: 7
+Path is : 72 71 52 38 23 24 20 NodeId: 72
+
+Top 2 path
+Destinated hospital: 30
+Shortest path length is: 10
+Path is : 72 71 52 38 23 19 25 29 27 30 
+=======================================
+NodeId: 73
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 13
+Path is : 73 79 81 61 50 51 44 45 40 36 34 32 30 NodeId: 73
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 15
+Path is : 73 79 81 61 50 51 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 74
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 14
+Path is : 74 73 79 81 61 50 51 44 45 40 36 34 32 30 NodeId: 74
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 16
+Path is : 74 73 79 81 61 50 51 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 75
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 16
+Path is : 75 80 86 89 79 81 61 50 51 44 45 40 36 34 32 30 NodeId: 75
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 18
+Path is : 75 80 86 89 79 81 61 50 51 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 76
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 10
+Path is : 76 69 22 44 45 40 36 34 32 30 NodeId: 76
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 12
+Path is : 76 69 22 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 77
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 10
+Path is : 77 10 11 44 45 40 36 34 32 30 NodeId: 77
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 12
+Path is : 77 10 11 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 78
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 16
+Path is : 78 82 87 99 95 81 61 50 51 44 45 40 36 34 32 30 NodeId: 78
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 18
+Path is : 78 82 87 99 95 81 61 50 51 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 79
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 12
+Path is : 79 81 61 50 51 44 45 40 36 34 32 30 NodeId: 79
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 14
+Path is : 79 81 61 50 51 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 80
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 15
+Path is : 80 86 89 79 81 61 50 51 44 45 40 36 34 32 30 NodeId: 80
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 17
+Path is : 80 86 89 79 81 61 50 51 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 81
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 11
+Path is : 81 61 50 51 44 45 40 36 34 32 30 NodeId: 81
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 13
+Path is : 81 61 50 51 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 82
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 15
+Path is : 82 87 99 95 81 61 50 51 44 45 40 36 34 32 30 NodeId: 82
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 17
+Path is : 82 87 99 95 81 61 50 51 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 83
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 10
+Path is : 83 69 22 44 45 40 36 34 32 30 NodeId: 83
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 12
+Path is : 83 69 22 44 45 40 36 37 26 25 19 20 
+=======================================
+
+=======================================
+
+=======================================
+NodeId: 86
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 14
+Path is : 86 89 79 81 61 50 51 44 45 40 36 34 32 30 NodeId: 86
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 16
+Path is : 86 89 79 81 61 50 51 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 87
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 14
+Path is : 87 99 95 81 61 50 51 44 45 40 36 34 32 30 NodeId: 87
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 16
+Path is : 87 99 95 81 61 50 51 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 88
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 11
+Path is : 88 76 69 22 44 45 40 36 34 32 30 NodeId: 88
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 13
+Path is : 88 76 69 22 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 89
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 13
+Path is : 89 79 81 61 50 51 44 45 40 36 34 32 30 NodeId: 89
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 15
+Path is : 89 79 81 61 50 51 44 45 40 36 37 26 25 19 20 
+=======================================
+
+=======================================
+
+=======================================
+NodeId: 92
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 11
+Path is : 92 83 69 22 44 45 40 36 34 32 30 NodeId: 92
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 13
+Path is : 92 83 69 22 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 93
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 11
+Path is : 93 70 58 22 44 45 40 36 34 32 30 NodeId: 93
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 13
+Path is : 93 70 58 22 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 94
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 15
+Path is : 94 86 89 79 81 61 50 51 44 45 40 36 34 32 30 NodeId: 94
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 17
+Path is : 94 86 89 79 81 61 50 51 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 95
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 12
+Path is : 95 81 61 50 51 44 45 40 36 34 32 30 NodeId: 95
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 14
+Path is : 95 81 61 50 51 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 96
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 12
+Path is : 96 88 76 69 22 44 45 40 36 34 32 30 NodeId: 96
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 14
+Path is : 96 88 76 69 22 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 97
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 14
+Path is : 97 89 79 81 61 50 51 44 45 40 36 34 32 30 NodeId: 97
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 16
+Path is : 97 89 79 81 61 50 51 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 98
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 12
+Path is : 98 92 83 69 22 44 45 40 36 34 32 30 NodeId: 98
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 14
+Path is : 98 92 83 69 22 44 45 40 36 37 26 25 19 20 
+=======================================
+NodeId: 99
+
+Top 1 path
+Destinated hospital: 30
+Shortest path length is: 13
+Path is : 99 95 81 61 50 51 44 45 40 36 34 32 30 NodeId: 99
+
+Top 2 path
+Destinated hospital: 20
+Shortest path length is: 15
+Path is : 99 95 81 61 50 51 44 45 40 36 37 26 25 19 20 
+=======================================

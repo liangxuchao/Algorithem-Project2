@@ -11,47 +11,59 @@ public class Algorithm {
         this.V = V;
         this.Model = M;
     }
-    
- 
 
-    public ArrayList<ArrayList<Integer>> printTopNShortest(int s, int n){
+
+    public ArrayList<NodeResult> getEachTopNShortest(int n) {
+        ArrayList<NodeResult> results = new ArrayList<>();
+        for (int i = 0; i < Model.adj.size(); i++) {
+            results.add(getTopNShortestFromSource(i, n));
+        }
+
+        return results;
+    }
+
+    public NodeResult getTopNShortestFromSource(int src, int n) {
 
         int pred[] = new int[V];
         int dist[] = new int[V];
+        NodeResult nodeResult = new NodeResult();
         ArrayList<ArrayList<Integer>> paths = new ArrayList<>();
-        int count=0;
-        
-        if(Model.adj.get(s).getIsHospital() == true) {
-        	ArrayList<Integer> path = new ArrayList<>();
-        	path.add(s);
-        	paths.add(path);
-        	n = n-1;
+        int count = 0;
+
+        if (Model.adj.get(src).getIsHospital() == true) {
+            ArrayList<Integer> path = new ArrayList<>();
+            path.add(src);
+            paths.add(path);
+            n = n - 1;
         }
-        
-        if(n > 0) {
-        	
-	        ArrayList<BFSResult> BFSResult = BFS(Model, s, V, pred, dist);
-	        if (BFSResult.size()==0) {
-	            return paths;
-	        }else{
-	            for(examples.visualization.BFSResult result: BFSResult){
-	                count++;
-	                ArrayList<Integer> path = new ArrayList<>();
-	                int crawl = result.Target;
-	                path.add(crawl);
-	                while (pred[crawl] != -1) {
-	                    path.add(pred[crawl]);
-	                    crawl = pred[crawl];
-	                }
-	
-	                paths.add(path);
-	                if(count >= n)
-	                    break;
-	            }
-	        }
+
+        if (n > 0) {
+
+            ArrayList<BFSResult> BFSResult = BFS(Model, src, V, pred, dist);
+            if (BFSResult.size() == 0) {
+                return new NodeResult(0,paths);
+            } else {
+                for (examples.visualization.BFSResult result : BFSResult) {
+                    count++;
+                    ArrayList<Integer> path = new ArrayList<>();
+                    int crawl = result.Target;
+                    path.add(crawl);
+                    while (pred[crawl] != -1) {
+                        path.add(pred[crawl]);
+                        crawl = pred[crawl];
+                    }
+
+                    paths.add(path);
+                    if (count >= n)
+                        break;
+                }
+            }
 
         }
-        return paths;
+        nodeResult.NodeId=src;
+        nodeResult.PathList=paths;
+
+        return nodeResult;
     }
 
 
@@ -85,7 +97,7 @@ public class Algorithm {
         visited[src] = true;
         dist[src] = 0;
         queue.add(src);
-        int rank=1;
+        int rank = 1;
         ArrayList<BFSResult> results = new ArrayList<>();
 
         int[] returnArr = new int[2];
@@ -105,7 +117,7 @@ public class Algorithm {
                     if (isHospital && dist[target] > 0) {
                         BFSResult result = new BFSResult();
                         result.Rank = rank;
-                        result.Target=target;
+                        result.Target = target;
                         rank++;
                         results.add(result);
                     }
