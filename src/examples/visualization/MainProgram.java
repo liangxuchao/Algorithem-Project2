@@ -23,15 +23,15 @@ public class MainProgram {
         String inputfilename = "karate/Demo.txt";
         Scanner scan2 = new Scanner(System.in);
 
-        System.out.print("\nDemo mode to execute? (0: no / 1: yes) ");
+        System.out.print("\nDemo mode to execute(user input source)? (0: no / 1: yes)");
         int isDemo = scan2.nextInt();
 
         System.out.print("\nChoose which file to execute? ");
         System.out.print("\n1.Small file (100 nodes) 2.Full Data (over 1 million nodes) ");
         inputfileoption = scan2.nextInt();
         if (inputfileoption == 2) {
-            inputfilename = "karate/roadmap_fullData.txt";
-            MAX_NODE = 1500000;
+            inputfilename = "karate/oregon2_010331.txt";
+            MAX_NODE = 65600;
         }
 
         System.out.print("\nInput n for top n path to the hospital? ");
@@ -67,6 +67,9 @@ public class MainProgram {
             ArrayList<NodeResult> eachTopNList = algo.getEachTopNShortest(n);
             String output = "";
             for (NodeResult nodeResult : eachTopNList) {
+                if (nodeResult.NodeId ==0 && nodeResult.PathList.size()==0)
+                    continue;
+
                 String resultString = printResult(nodeResult);
                 output += resultString;
 
@@ -97,7 +100,6 @@ public class MainProgram {
             System.out.println("Destinated hospital: " + item.get(0));
             System.out.println("Shortest path length is: " + pathCount);
             System.out.println("Path is :");
-
 
 
             resultString += String.format("NodeId: %d\n", topNList.NodeId);

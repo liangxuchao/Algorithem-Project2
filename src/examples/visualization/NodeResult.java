@@ -7,6 +7,7 @@ public class NodeResult {
     public ArrayList<ArrayList<Integer>> PathList;
 
     public  NodeResult(){};
+
     public NodeResult(int nodeId,  ArrayList<ArrayList<Integer>> pathList){
         this.NodeId=nodeId;
         this.PathList=pathList;
