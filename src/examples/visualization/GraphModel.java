@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 
 public class GraphModel {
-	public static ArrayList<NodeModel >adj;
+	public static ArrayList<NodeModel>adj;
 	
     public static void addEdge(ArrayList<NodeModel> adj, 
                         int u, int v) 
@@ -21,16 +21,16 @@ public class GraphModel {
     public static int V = 0 ; 
  	public GraphModel(int maxnode, String inputfilename)
     { 
-        // Creating a graph with  vertices 
+         //Creating a graph with  vertices
     	this.V = maxnode;
-        adj = new ArrayList<NodeModel>(V); 
+        adj = new ArrayList<NodeModel>(V);
 
         for (int i = 0; i < V; i++) {
-        	 adj.addAll(new ArrayList<NodeModel>()); 
-        	        	 
-        	 NodeModel n = new NodeModel(V,false);
+        	 adj.addAll(new ArrayList<NodeModel>());
+
+        	 NodeModel n = new NodeModel(i,false);
         	 adj.add(n);
-        	 
+
         }
 
         hospitalArr();
@@ -45,8 +45,8 @@ public class GraphModel {
           	  ss = scan.nextLine(); 
                 if(!ss.startsWith("#")) { 
               	  String[] arr = ss.split("\\s+");
-      	
-      			  
+
+
                       addEdge(adj, Integer.parseInt(arr[0]),Integer.parseInt(arr[1]));
   	    		} 
             }
